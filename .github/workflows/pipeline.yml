@@ -25,4 +25,9 @@ jobs:
         run: npm run build
       - name: Run Tets
         run: npm test 
-          
+      - name: npm run cypress
+        uses: cypress-io/github-actions@v2
+        with:
+          command: npm run test:e2e
+          start: npm run start-test
+          wait-on: http://localhost:5000
