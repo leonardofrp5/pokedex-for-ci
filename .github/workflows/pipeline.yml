@@ -27,7 +27,8 @@ jobs:
           fetch-depth: 0
       - name: Install Node
         uses: actions/setup-node@v2
-        with: 
+        with:
+          cache: 'npm'
           node-version: '14'
       - name: Install dependencies
         run: npm ci
@@ -62,7 +63,8 @@ jobs:
           fetch-depth: 0
       - name: Install Node
         uses: actions/setup-node@v2
-        with: 
+        with:
+          cache: 'npm'
           node-version: '14'
       - name: Install dependencies
         run: npm ci
