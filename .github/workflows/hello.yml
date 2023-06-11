@@ -1,21 +1,15 @@
-# nombre 
 name: Say hello 
 
-# Deben tener un avento de cuando se debe activar este archivo 
 on:
-  push: # evento push
-    branches: # donde en las ramas 
-      - main # cual rama main en este caso
+  push:
+    branches:
+      - main
 
-# Trabajos que debe hacer
 jobs:
-  hello_word: # Se da el nombre del trabajo que va hacer
-    runs-on: ubuntu-18.04 # En que OS va a trabajar lo mejor es dejar una version del OS, es bueno usas la ultima
-    steps: # Pasos que debe hacer
-      - name: Echo the message # Nombre del paso
-        run: echo "Hello Leo!" # Accion
-      - name: Give me date # Nombre de otro paso
-        run: ls -l # Accion de otro paso
-      # Error de tabulado
-      # - name: Give me date # Nombre de otro paso
-      #  run: ls -l # Accion de otro paso
+  hello_word:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Echo the message
+        run: echo "Hello Leo!"
+      - name: Give me date
+        run: ls -l
