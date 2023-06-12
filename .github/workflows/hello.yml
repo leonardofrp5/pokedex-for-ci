@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo the message
-        run: |
-          echo "Hello Leo!!!"
+        run: echo "Hello Leo!"
+      - name: Give me date
+        run: date
+      - run: ls -l
