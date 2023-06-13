@@ -84,10 +84,10 @@ jobs:
           heroku_email: ${{secrets.HEROKU_API_EMAIL}}
           healthcheck_url: "http://${{secrets.HEROKU_API_APP}}.herokuapp.com/health"
           rollbackonhealthcheckfailed: true
-      # - name: npm run cypress
-      #   uses: cypress-io/github-action@v2
-      #   with:
-      #     command: npm run test:e2e
-      #     start: npm run start-test
-      #     wait-on: http://localhost:5000
+      - name: npm run cypress
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test:e2e
+          start: npm run start-test
+          wait-on: http://localhost:5000
       
